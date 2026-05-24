@@ -3,67 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unidad Educativa Particular Vicente Rocafuerte</title>
+    <title>Unidad Educativa Particular "Vicente Rocafuerte"</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --azul-institucional: #1d3557;
+            --verde-alegre: #2a9d8f;
+            --amarillo-escolar: #e9c46a;
+            --gris-fondo: #f8f9fa;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--gris-fondo);
+        }
+        .navbar { background-color: var(--azul-institucional); }
+        
+        /* SECCIÓN PRINCIPAL CON IMAGEN DE FONDO */
         .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1523050853063-91589436026e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
+            background: linear-gradient(rgba(29, 53, 87, 0.75), rgba(29, 53, 87, 0.75)), 
+                        url('https://lh3.googleusercontent.com/d/1qHJUpIBJiu6WlFDLCPRWkbTWuAYBg0Q5') no-repeat center center/cover;
             color: white;
             padding: 100px 0;
-            text-align: center;
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
         }
-        .navbar-brand { font-weight: bold; color: #003366 !important; }
-        .btn-primary { background-color: #003366; border: none; }
+
+        .btn-matricula {
+            background-color: var(--amarillo-escolar);
+            color: #000;
+            font-weight: bold;
+            border: 2px solid transparent;
+            padding: 15px 30px;
+            transition: all 0.3s ease;
+        }
+        .btn-matricula:hover {
+            background-color: transparent;
+            border-color: var(--amarillo-escolar);
+            color: var(--amarillo-escolar);
+        }
+        .card-oferta {
+            border: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--verde-alegre);
+            border-radius: 8px;
+        }
+        .bg-docentes {
+            background-color: #e2eafc;
+            border-left: 5px solid var(--azul-institucional);
+        }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">UEP Vicente Rocafuerte</a>
-            <div class="ms-auto">
-                <span class="navbar-text">Pichincha, Manabí</span>
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <span class="fs-5 fw-bold text-uppercase">U.E.P. "Vicente Rocafuerte"</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#oferta">Oferta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#docentes">Docentes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#admisiones">Admisiones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
-    <header class="hero-section">
+    <header id="inicio" class="hero-section text-center">
         <div class="container">
-            <h1 class="display-4 fw-bold">Excelencia Educativa para el Futuro</h1>
-            <p class="lead">Formando líderes con valores y tecnología en la provincia de Manabí.</p>
-            <div class="mt-4">
-                <a href="#contacto" class="btn btn-primary btn-lg">Contáctanos</a>
+            <h1 class="display-4 fw-bold mb-3">Unidad Educativa Particular<br>"Vicente Rocafuerte"</h1>
+            <p class="lead text-uppercase mb-4 fw-bold" style="color: var(--amarillo-escolar); letter-spacing: 2px;">Pichincha - Manabí</p>
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-8">
+                    <div class="bg-dark bg-opacity-50 p-3 rounded text-white border border-light">
+                        <p class="mb-0 fs-5 italic">"La educación es la que sobrevive cuando todo lo que se ha aprendido se ha olvidado."</p>
+                    </div>
+                </div>
             </div>
+            <a href="https://forms.gle/5AHJM3N1wvSHEsDL6" target="_blank" class="btn btn-lg btn-matricula shadow-lg">
+                <i class="fa-solid fa-pen-to-square me-2"></i>Inscríbete Aquí - Matrículas Abiertas
+            </a>
         </div>
     </header>
 
-    <section class="py-5">
+    <section id="oferta" class="py-5">
         <div class="container">
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <h3>Misión</h3>
-                    <p>Brindar una educación integral de calidad, centrada en el desarrollo del pensamiento crítico.</p>
+            <h2 class="text-center fw-bold mb-5" style="color: var(--azul-institucional);">Oferta Académica</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card card-oferta h-100 p-3">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold text-success mb-3"><i class="fa-solid fa-sun me-2"></i>Sección Matutina</h4>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><i class="fa-solid fa-check text-success me-2"></i>Inicial y Preparatoria</li>
+                                <li class="list-group-item"><i class="fa-solid fa-check text-success me-2"></i>Básica Elemental y Media (1ro a 7mo)</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <h3>Visión</h3>
-                    <p>Ser la institución referente en servicios virtuales y presenciales en el cantón Pichincha.</p>
-                </div>
-                <div class="col-md-4">
-                    <h3>Tecnología</h3>
-                    <p>Implementación de servicios digitales avanzados para nuestra comunidad estudiantil.</p>
+                <div class="col-md-6">
+                    <div class="card card-oferta h-100 p-3" style="border-top-color: var(--azul-institucional);">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold mb-3" style="color: var(--azul-institucional);"><i class="fa-solid fa-moon me-2"></i>Sección Vespertina</h4>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><i class="fa-solid fa-check text-primary me-2"></i>Básica Superior (8vo a 10mo)</li>
+                                <li class="list-group-item"><i class="fa-solid fa-check text-primary me-2"></i>Bachillerato en Ciencias</li>
+                                <li class="list-group-item"><i class="fa-solid fa-check text-primary me-2"></i>Bachillerato Técnico en Informática</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contacto" class="bg-dark text-white py-4 mt-5">
+    <section id="docentes" class="py-5 bg-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8">
+                    <div class="p-5 rounded bg-docentes shadow-sm">
+                        <div class="row align-items-center text-center text-md-start">
+                            <div class="col-md-8 mb-3 mb-md-0">
+                                <h3 class="fw-bold mb-2" style="color: var(--azul-institucional);"><i class="fa-solid fa-chalkboard-user me-2"></i>Portal Docentes</h3>
+                                <p class="text-dark mb-0">Espacio de acceso exclusivo para el personal administrativo y cuerpo docente de la institución. Ingresa de forma directa a tu bandeja de correo institucional.</p>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <a href="https://mail.google.com" target="_blank" class="btn btn-danger btn-lg px-4 py-3 fw-bold w-100 shadow-sm">
+                                    <i class="fa-solid fa-envelope open-letter me-2"></i>Ir a Gmail
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="admisiones" class="py-5 text-white" style="background-color: var(--azul-institucional);">
         <div class="container text-center">
-            <p class="mb-1">© 2026 Unidad Educativa Particular Vicente Rocafuerte</p>
-            <p class="small text-secondary">Ubicación: Pichincha, Manabí, Ecuador</p>
-            <p class="small text-secondary">Contacto: info@uepvr.edu.ec</p>
+            <h3 class="fw-bold mb-4">Información de Matrículas Ordinarias</h3>
+            <p class="fs-5 mb-5"><i class="fa-solid fa-calendar-days me-2" style="color: var(--amarillo-escolar);"></i>Horarios de atención: 08:30 - 12:00 / 13:30 - 17:00 (Todo el mes de Abril)</p>
+            <a href="https://forms.gle/5AHJM3N1wvSHEsDL6" target="_blank" class="btn btn-success btn-lg px-5 py-3 fw-bold shadow">
+                <i class="fa-solid fa-file-signature me-2"></i>LLENAR FORMULARIO EN LÍNEA
+            </a>
+        </div>
+    </section>
+
+    <footer id="contacto" class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-5">
+                    <h5 class="fw-bold text-uppercase mb-3" style="color: var(--amarillo-escolar);">Contacto Oficial</h5>
+                    <p class="mb-2"><i class="fa-solid fa-envelope me-2 text-muted"></i> 13h03021@educacion.gob.ec</p>
+                    <p class="mb-2"><i class="fa-solid fa-phone me-2 text-muted"></i> 0981378082 / 0997715995</p>
+                    <p class="mb-2"><i class="fa-solid fa-mobile-screen me-2 text-muted"></i> 0979619611</p>
+                    <p class="mb-2"><i class="fa-solid fa-location-dot me-2 text-muted"></i> Cantón Pichincha, Manabí, Ecuador</p>
+                </div>
+                <div class="col-md-7">
+                    <h5 class="fw-bold text-uppercase mb-3" style="color: var(--amarillo-escolar);">Nuestra Ubicación</h5>
+                    <div class="ratio ratio-16x9 rounded overflow-hidden shadow">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=-1.049518,-79.821525&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-5 border-secondary">
+            <p class="text-center text-muted small mb-0">© <span id="year"></span> Unidad Educativa Particular "Vicente Rocafuerte". Todos los derechos reservados.</p>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
