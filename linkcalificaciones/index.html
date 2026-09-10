@@ -31,6 +31,18 @@
         .btn-link-calificaciones:hover {
             transform: translateX(5px);
         }
+        .btn-sistema {
+            padding: 18px 24px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        .btn-sistema:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
     </style>
 </head>
 <body>
@@ -39,66 +51,90 @@
         <div class="container">
             <img src="../logo.png" alt="Logo UEPVR" height="60" class="mb-2" onerror="this.style.display='none'">
             <h1 class="fs-3 fw-bold text-uppercase mb-1">U.E.P. "Vicente Rocafuerte"</h1>
-            <p class="lead mb-0 text-muted-white small text-uppercase" style="color: var(--amarillo-escolar); letter-spacing: 1px;">Pichincha - Manabí</p>
+            <p class="lead mb-0 small text-uppercase" style="color: var(--amarillo-escolar); letter-spacing: 1px;">Pichincha - Manabí</p>
         </div>
     </header>
 
     <main class="py-5">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="fw-bold" style="color: var(--azul-institucional);"><i class="fa-solid fa-file-invoice me-2"></i>Enlaces Calificaciones y Asistencia</h2>
+                <h2 class="fw-bold" style="color: var(--azul-institucional);"><i class="fa-solid fa-file-invoice me-2"></i>Portal de Calificaciones</h2>
                 <p class="text-muted mx-auto" style="max-width: 600px;">
-                    Estimado docente, haga clic sobre su respectivo grado o registro. Recuerde iniciar sesión con su correo institucional dentro del entorno de Google Sheets para poder editar.
+                    Seleccione el sistema al que desea acceder para registrar notas y asistencia.
                 </p>
                 <a href="https://mail.google.com" target="_blank" class="btn btn-sm btn-outline-danger px-3 fw-bold">
                     <i class="fa-solid fa-envelope me-1"></i> ¿No has iniciado sesión? Ir a Gmail
                 </a>
             </div>
-            
-            <div class="row g-4 mb-5">
-                <div class="col-md-6">
-                    <div class="bg-white p-4 rounded shadow-sm h-100 border-top border-4 border-success">
-                        <h4 class="fw-bold text-success mb-4"><i class="fa-solid fa-children me-2"></i>Sección Escuela</h4>
-                        <div class="d-grid gap-2">
-                            <a href="https://docs.google.com/spreadsheets/d/1jOWJA1MCVFLprcgPbyHhOJh4uibIL1qAunhBrbI_iXA/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-success me-2"></i> INICIAL I "A"</a>
-                            <a href="https://docs.google.com/spreadsheets/d/1Lb2gJMPjxLyYxjtYtODllHHFjaoPmCVV8-hNOTE17FA/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-success me-2"></i> INICIAL II "A"</a>
-                            <a href="https://docs.google.com/spreadsheets/d/1epGJW-8LCzKI25RncB3uYBzSFXJF30iVz6oul4oUnOs/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-success me-2"></i> 1ERO BASICA "A"</a>
-                            <a href="https://docs.google.com/spreadsheets/d/1kG2bAQQXo2ndqONoSS3z-5TRdAG43gZnS57j7GXCEf0/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-success me-2"></i> 2DO BASICA "A"</a>
-                            <a href="https://docs.google.com/spreadsheets/d/1xm7agiz6z-Yg8Kb4CruQBr23Z-91nYJjzcTKBhO6P4I/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-success me-2"></i> 3ERO BASICA "A"</a>
-                            <a href="https://docs.google.com/spreadsheets/d/1sTmQn3QoM7pXP6dH-4ngitrnIJL8uTJgiV9QgShmb_s/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-success me-2"></i> 4TO BASICA "A"</a>
-                            <a href="https://docs.google.com/spreadsheets/d/1jvYavaO1TChCp2f5NyCv4kot4y1srpc1CZuCodf_BUE/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-success me-2"></i> 5TO BASICA "A"</a>
-                            <a href="https://docs.google.com/spreadsheets/d/1_zvXTFWwb2NbrLraMMpepC0J-CNGCmnq4VurbS5X_Ag/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-success me-2"></i> 6TO BASICA "A"</a>
-                            <a href="https://docs.google.com/spreadsheets/d/1TY0-xB5_GKe8H_HkfVOlvvYEjY4zMB9IjXS-Xr3gyHw/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-success me-2"></i> 7MO BASICA "A"</a>
-                        </div>
-                    </div>
+
+            <!-- BOTONES DE ACCESO A SISTEMAS -->
+            <div class="row justify-content-center g-3 mb-5">
+                <div class="col-md-5">
+                    <a href="https://notas.uepvr.edu.ec" target="_blank" class="btn btn-success btn-sistema w-100 d-flex align-items-center justify-content-center">
+                        <i class="fa-solid fa-arrow-up-right-from-square me-2"></i> Nuevo Sistema de Calificaciones
+                    </a>
                 </div>
-                
-                <div class="col-md-6">
-                    <div class="bg-white p-4 rounded shadow-sm h-100 border-top border-4 border-primary">
-                        <h4 class="fw-bold text-primary mb-4"><i class="fa-solid fa-graduation-cap me-2"></i>Sección Colegio</h4>
-                        <div class="d-grid gap-2">
-                            <a href="https://docs.google.com/spreadsheets/d/17LU5oDW96Y95u1RtbJNQ59qLBq2sPdKpLOmJ9JSVHW4/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-primary me-2"></i> 8VO BASICA "A"</a>
-                            <a href="https://docs.google.com/spreadsheets/d/1MkRnQ167dHvpBsDmHTYgBt0ZowuedG-1xlN2sNtv9Co/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-primary me-2"></i> 8VO BASICA "B"</a>
-                            <a href="https://docs.google.com/spreadsheets/d/1zZ75BkcWD2z8jEMsQTg55-5GOoIL3XTl-7UcG-oHIGg/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-primary me-2"></i> 9NO BASICA "A"</a>
-                            <a href="https://docs.google.com/spreadsheets/d/1o88IIpPYgXuJFiLC33OjXzUITe_-AD03k7nKey5uPvw/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-primary me-2"></i> 9NO BASICA "B"</a>
-                            <a href="https://docs.google.com/spreadsheets/d/1hqnxEnu2s4KF1qd9sBLKo_LPc3YSC3Tf02R2Az7WYqk/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-primary me-2"></i> 10MO BASICA "A"</a>
-                            <a href="https://docs.google.com/spreadsheets/d/121dsvzfLAyy9epybnylANM458Qh8LXD182wUyq24hyw/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-primary me-2"></i> BACH 1ERO TECNICO</a>
-                            <a href="https://docs.google.com/spreadsheets/d/1_UJ9TjtMXU2484HqfGpDXduJ0BdznY3wkydGSiALrc0/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-primary me-2"></i> BACH 1ERO CIENCIAS</a>
-                            <a href="https://docs.google.com/spreadsheets/d/12HxnbZl50BroBsbR6xMOmLq4FJWOpp6LtY3sEA0x8Uw/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-primary me-2"></i> BACH 2DO TECNICO</a>
-                            <a href="https://docs.google.com/spreadsheets/d/1N19H7yrAhgKFWoAC5ragF0KRVxZN75Me4yiw93jGJsE/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-primary me-2"></i> BACH 2DO CIENCIAS</a>
-                            <a href="https://docs.google.com/spreadsheets/d/1KOljX3uWWpDfNb3PVSkuRFTk8c4DqyA7bY_sslkO6Nc/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-primary me-2"></i> BACH 3ERO CIENCIAS</a>
-                            <a href="https://docs.google.com/spreadsheets/d/17tcY-PbqEu-ol4efWWu8-VhLfYIZ_FwzlZcHzHA4Vhg/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-primary me-2"></i> BACH 3ERO TECNICO</a>
-                        </div>
-                    </div>
+                <div class="col-md-5">
+                    <button class="btn btn-outline-primary btn-sistema w-100 d-flex align-items-center justify-content-center" type="button" data-bs-toggle="collapse" data-bs-target="#sistemaAntiguo" aria-expanded="true" aria-controls="sistemaAntiguo">
+                        <i class="fa-solid fa-folder-open me-2"></i> Antiguo Sistema de Calificaciones
+                    </button>
                 </div>
             </div>
 
-            <div class="row justify-content-center">
-                <div class="col-md-8 col-lg-6">
-                    <div class="bg-white p-4 rounded shadow-sm border-top border-4 border-warning text-center">
-                        <h4 class="fw-bold text-warning mb-3"><i class="fa-solid fa-clipboard-user me-2"></i>Asistencia</h4>
-                        <div class="d-grid">
-                            <a href="https://docs.google.com/spreadsheets/d/1KtmT6eqOuFE3YrXCbQKaLV56k6_RjKc9PpaQXp57ZAM/edit?usp=drive_link" target="_blank" class="btn btn-outline-warning btn-link-calificaciones text-dark fw-bold"><i class="fa-regular fa-file-excel text-warning me-2"></i> CONTROL DE ASISTENCIA</a>
+            <!-- CONTENIDO DEL SISTEMA ANTIGUO (DESPLEGABLE) -->
+            <div class="collapse show" id="sistemaAntiguo">
+                <div class="text-center mb-4">
+                    <span class="badge bg-secondary p-2 px-3 fs-6">Sábanas de Notas en Google Sheets</span>
+                </div>
+
+                <div class="row g-4 mb-5">
+                    <!-- SECCIÓN ESCUELA -->
+                    <div class="col-md-6">
+                        <div class="bg-white p-4 rounded shadow-sm h-100 border-top border-4 border-success">
+                            <h4 class="fw-bold text-success mb-4"><i class="fa-solid fa-children me-2"></i>Sección Escuela</h4>
+                            <div class="d-grid gap-2">
+                                <a href="https://docs.google.com/spreadsheets/d/1jOWJA1MCVFLprcgPbyHhOJh4uibIL1qAunhBrbI_iXA/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-success me-2"></i> INICIAL I "A"</a>
+                                <a href="https://docs.google.com/spreadsheets/d/1Lb2gJMPjxLyYxjtYtODllHHFjaoPmCVV8-hNOTE17FA/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-success me-2"></i> INICIAL II "A"</a>
+                                <a href="https://docs.google.com/spreadsheets/d/1epGJW-8LCzKI25RncB3uYBzSFXJF30iVz6oul4oUnOs/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-success me-2"></i> 1ERO BASICA "A"</a>
+                                <a href="https://docs.google.com/spreadsheets/d/1kG2bAQQXo2ndqONoSS3z-5TRdAG43gZnS57j7GXCEf0/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-success me-2"></i> 2DO BASICA "A"</a>
+                                <a href="https://docs.google.com/spreadsheets/d/1xm7agiz6z-Yg8Kb4CruQBr23Z-91nYJjzcTKBhO6P4I/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-success me-2"></i> 3ERO BASICA "A"</a>
+                                <a href="https://docs.google.com/spreadsheets/d/1sTmQn3QoM7pXP6dH-4ngitrnIJL8uTJgiV9QgShmb_s/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-success me-2"></i> 4TO BASICA "A"</a>
+                                <a href="https://docs.google.com/spreadsheets/d/1jvYavaO1TChCp2f5NyCv4kot4y1srpc1CZuCodf_BUE/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-success me-2"></i> 5TO BASICA "A"</a>
+                                <a href="https://docs.google.com/spreadsheets/d/1_zvXTFWwb2NbrLraMMpepC0J-CNGCmnq4VurbS5X_Ag/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-success me-2"></i> 6TO BASICA "A"</a>
+                                <a href="https://docs.google.com/spreadsheets/d/1TY0-xB5_GKe8H_HkfVOlvvYEjY4zMB9IjXS-Xr3gyHw/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-success me-2"></i> 7MO BASICA "A"</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- SECCIÓN COLEGIO -->
+                    <div class="col-md-6">
+                        <div class="bg-white p-4 rounded shadow-sm h-100 border-top border-4 border-primary">
+                            <h4 class="fw-bold text-primary mb-4"><i class="fa-solid fa-graduation-cap me-2"></i>Sección Colegio</h4>
+                            <div class="d-grid gap-2">
+                                <a href="https://docs.google.com/spreadsheets/d/17LU5oDW96Y95u1RtbJNQ59qLBq2sPdKpLOmJ9JSVHW4/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-primary me-2"></i> 8VO BASICA "A"</a>
+                                <a href="https://docs.google.com/spreadsheets/d/1MkRnQ167dHvpBsDmHTYgBt0ZowuedG-1xlN2sNtv9Co/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-primary me-2"></i> 8VO BASICA "B"</a>
+                                <a href="https://docs.google.com/spreadsheets/d/1o88IIpPYgXuJFiLC33OjXzUITe_-AD03k7nKey5uPvw/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-primary me-2"></i> 9NO BASICA "A"</a>
+                                <a href="https://docs.google.com/spreadsheets/d/1zZ75BkcWD2z8jEMsQTg55-5GOoIL3XTl-7UcG-oHIGg/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-primary me-2"></i> 9NO BASICA "B"</a>
+                                <a href="https://docs.google.com/spreadsheets/d/1hqnxEnu2s4KF1qd9sBLKo_LPc3YSC3Tf02R2Az7WYqk/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-primary me-2"></i> 10MO BASICA "A"</a>
+                                <a href="https://docs.google.com/spreadsheets/d/121dsvzfLAyy9epybnylANM458Qh8LXD182wUyq24hyw/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-primary me-2"></i> BACH 1ERO TECNICO</a>
+                                <a href="https://docs.google.com/spreadsheets/d/1_UJ9TjtMXU2484HqfGpDXduJ0BdznY3wkydGSiALrc0/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-primary me-2"></i> BACH 1ERO CIENCIAS</a>
+                                <a href="https://docs.google.com/spreadsheets/d/12HxnbZl50BroBsbR6xMOmLq4FJWOpp6LtY3sEA0x8Uw/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-primary me-2"></i> BACH 2DO TECNICO</a>
+                                <a href="https://docs.google.com/spreadsheets/d/1N19H7yrAhgKFWoAC5ragF0KRVxZN75Me4yiw93jGJsE/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-primary me-2"></i> BACH 2DO CIENCIAS</a>
+                                <a href="https://docs.google.com/spreadsheets/d/1KOljX3uWWpDfNb3PVSkuRFTk8c4DqyA7bY_sslkO6Nc/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-primary me-2"></i> BACH 3ERO CIENCIAS</a>
+                                <a href="https://docs.google.com/spreadsheets/d/17tcY-PbqEu-ol4efWWu8-VhLfYIZ_FwzlZcHzHA4Vhg/edit?usp=drive_link" target="_blank" class="btn btn-outline-dark btn-link-calificaciones"><i class="fa-regular fa-file-excel text-primary me-2"></i> BACH 3ERO TECNICO</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECCIÓN ASISTENCIA -->
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-6">
+                        <div class="bg-white p-4 rounded shadow-sm border-top border-4 border-warning text-center">
+                            <h4 class="fw-bold text-warning mb-3"><i class="fa-solid fa-clipboard-user me-2"></i>Asistencia</h4>
+                            <div class="d-grid">
+                                <a href="https://docs.google.com/spreadsheets/d/1KtmT6eqOuFE3YrXCbQKaLV56k6_RjKc9PpaQXp57ZAM/edit?usp=drive_link" target="_blank" class="btn btn-outline-warning btn-link-calificaciones text-dark fw-bold"><i class="fa-regular fa-file-excel text-warning me-2"></i> CONTROL DE ASISTENCIA</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -113,6 +149,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
